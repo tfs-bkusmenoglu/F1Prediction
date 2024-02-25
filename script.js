@@ -47,13 +47,13 @@ function printDriverStandings() {
     }
 }
 
-// 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
+// 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
 // Function to create or update a Gist
 // Function to create or update a Gist
 function createOrUpdateGist(userName, standingsText) {
     // Check if a Gist with the same description already exists for the user
     $.ajax({
-        url: `https://api.github.com/users/berenkusmenoglu/gists`,
+        url: `https://api.github.com/users/tfs-bkusmenoglu/gists`,
         type: "GET",
         dataType: "json",
         success: function(response) {
@@ -85,7 +85,7 @@ function createGist(userName, standingsText) {
         type: "POST",
         dataType: "json",
         beforeSend: function(request) {
-            request.setRequestHeader("Authorization", "token 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");
+            request.setRequestHeader("Authorization", "token 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");
         },
         data: JSON.stringify({
             description: `${userName}`,
@@ -113,7 +113,7 @@ function updateGist(gistId, standingsText) {
         type: "PATCH",
         dataType: "json",
         beforeSend: function(request) {
-            request.setRequestHeader("Authorization", "token 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");
+            request.setRequestHeader("Authorization", "token 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");
         },
         data: JSON.stringify({
             files: {
@@ -162,7 +162,7 @@ function loadPrediction() {
 function getPrediction(userName) {
     // Get all Gists for the user
     $.ajax({
-        url: `https://api.github.com/users/berenkusmenoglu/gists`,
+        url: `https://api.github.com/users/tfs-bkusmenoglu/gists`,
         type: "GET",
         dataType: "json",
         success: function(response) {
@@ -174,10 +174,10 @@ function getPrediction(userName) {
       
             if (existingGist) {
                 loadStandingsFromGist(existingGist.id);
-
+                alert("Successfully loaded prediction for " + userName);    
             } else {
                 // If no existing prediction is found, inform the user
-                alert("No prediction found for the specified user.");
+                alert("No prediction found for the specified user" );
             }
         },
         error: function(error) {
