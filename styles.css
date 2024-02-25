@@ -1,0 +1,200 @@
+@font-face {
+    font-family: 'Formula1'; /* Choose a name for your custom font */
+    src: url('Fonts/Formula1-Regular-1.ttf') format('truetype'); /* Adjust the path */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Formula1Bold'; /* Choose a name for your custom font */
+    src: url('Fonts/Formula1-Bold-4.ttf') format('truetype'); /* Adjust the path */
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Formula1', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #303030;
+}
+
+.Title {
+    font-family: 'Formula1Bold', sans-serif;
+    font-size: 50px;
+    text-align: center;
+}
+
+:root {
+    --stake-color: #52E252;
+    --visa-cash-app-rb-color: #6692FF;
+    --alpine-color: #FF87BC;
+    --aston-martin-color: #229971;
+    --ferrari-color: #E8002D;
+    --haas-color: #B6BABD;
+    --mclaren-color: #FF8000;
+    --mercedes-amg-color: #27F4D2;
+    --red-bull-color: #3671C6;
+    --williams-color: #64C4FF;
+}
+
+.sortable-list li {
+    position: relative;
+}
+
+.order-number {
+    font-family: 'Formula1Bold', sans-serif;
+    font-size: 32px;
+    text-align: center;
+    margin: 6px;
+    padding: 6px;
+    font-weight: bold;
+    background-color: #e10600; /* Choose a contrasting color */
+    color: #FFFFFF; /* Text color */
+    padding: 6px; /* Adjust as needed for spacing */
+    border-radius: 10%; 
+    border-top-color: white;
+    border-left-color: white;
+    border-right-color: white;
+    border-bottom-color: white;
+    border-width: 4px;
+    border-style: solid;
+    margin-right: 20px; /* Add some space between the number and the driver name */
+
+    min-width: 40px;
+}
+
+ul.sortable-list li[data-team="Stake"] {
+    background-color: var(--stake-color);
+}
+
+ul.sortable-list li[data-team="Visa Cash App RB"] {
+    background-color: var(--visa-cash-app-rb-color);
+}
+
+ul.sortable-list li[data-team="Alpine"] {
+    background-color: var(--alpine-color);
+}
+
+ul.sortable-list li[data-team="Aston Martin"] {
+    background-color: var(--aston-martin-color);
+}
+
+ul.sortable-list li[data-team="Ferrari"] {
+    background-color: var(--ferrari-color);
+}
+
+ul.sortable-list li[data-team="Haas"] {
+    background-color: var(--haas-color);
+}
+
+ul.sortable-list li[data-team="McLaren"] {
+    background-color: var(--mclaren-color);
+}
+
+ul.sortable-list li[data-team="Mercedes-AMG"] {
+    background-color: var(--mercedes-amg-color);
+}
+
+ul.sortable-list li[data-team="Red Bull"] {
+    background-color: var(--red-bull-color);
+}
+
+ul.sortable-list li[data-team="Williams"] {
+    background-color: var(--williams-color);
+}
+
+.sortable-list li {
+    /* Add styles for each list item */
+    list-style: none; /* Remove default list styles */
+    margin-bottom: 10px; /* Adjust as needed */
+}
+
+.sortable-list li img {
+    max-width: 48px;
+    max-height: 48px;
+    margin-right: 3px; /* Adjust as needed */
+}
+
+.sortable-list li .driver-color {
+    width: 20px; /* Adjust as needed */
+    height: 20px; /* Adjust as needed */
+    background-color: var(--team-background-color);
+    display: inline-block;
+    margin-right: 10px; /* Adjust as needed */
+}
+
+
+.prediction-container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sortable-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sortable-list li {
+    /* font-family: 'Formula1Bold', sans-serif; */
+    font-size:  20px;
+    background-color: #f9f9f9;
+    padding: 6px;
+    margin: 5px 0;
+    border-radius: 4px;
+    cursor: move;
+    display: flex;
+    align-items: center;
+}
+
+.driver-number {
+    font-family: 'Formula1Bold', sans-serif;
+    /* font-family: 'Formula1', sans-serif;
+    font-size: 32px;
+    text-align: center;
+    visibility: hidden; */
+    margin: 3px;
+    padding: 3px;
+}
+
+
+.driver-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+#submit-prediction {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#submit-prediction:hover {
+    background-color: #45a049;
+}
+
+#load-prediction {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#load-prediction:hover {
+    background-color: #45a049;
+}
+/* Rest of your CSS styles */

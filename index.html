@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1 Prediction 2024</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+
+<div class="prediction-container">
+    <span class="Title">F1 2024 Season Predictions</span>
+    
+    <ul id="driver-list" class="sortable-list">
+        <!-- Driver List Items -->
+        <li data-driver="Valterri Bottas" data-team="Stake">
+            <span class="driver-color" style="--team-background-color: var(--stake-color);"></span>
+            <span class="order-number"></span> 
+            <img src="Images/stake_logo.png" alt="Stake Logo">
+            Valterri Bottas <span class="driver-number">77</span> 
+        </li>
+
+        <li data-driver="Zhou Guanyu" data-team="Stake">
+            <span class="driver-color" style="--team-background-color: var(--stake-color);"></span>
+            <span class="order-number"></span> 
+            <img src="Images/stake_logo.png" alt="Stake Logo">
+            Zhou Guanyu <span class="driver-number">24</span> 
+        </li>
+
+        <li data-driver="Yuki Tsunoda" data-team="Visa Cash App RB">
+            <span class="driver-color" style="--team-background-color: var(--visa-cash-app-rb-color);"></span>
+            <span class="order-number"></span> 
+            <img src="Images/visacashapp_rb_logo.png" alt="Visa Cash App RB Logo">
+            Yuki Tsunoda <span class="driver-number">22</span> 
+        </li> 
+
+        <li data-driver="Daniel Ricciardo" data-team="Visa Cash App RB">
+            <span class="driver-color" style="--team-background-color: var(--visa-cash-app-rb-color);"></span>
+            <span class="order-number"></span> 
+            <img src="Images/visacashapp_rb_logo.png" alt="Visa Cash App RB Logo">
+            Daniel Ricciardo <span class="driver-number">3</span> 
+        </li>
+
+        <li data-driver="Pierre Gasly" data-team="Alpine">
+            <span class="driver-color" style="--team-background-color: var(--alpine-color);"></span>
+            <span class="order-number"></span> 
+            <img src="Images/alpine_logo.png" alt="Alpine Logo">
+            Pierre Gasly <span class="driver-number">10</span> 
+        </li>
+
+        <li data-driver="Esteban Ocon" data-team="Alpine">
+            <span class="driver-color" style="--team-background-color: var(--alpine-color);"></span>
+            <span class="order-number"></span> 
+            <img src="Images/alpine_logo.png" alt="Alpine Logo">
+            Esteban Ocon <span class="driver-number">31</span> 
+        </li>
+
+        <li data-driver="Fernando Alonso" data-team="Aston Martin">
+            <span class="driver-color" style="--team-background-color: var(--aston-martin-color);"></span>
+            <span class="order-number"></span> 
+            <img src="Images/astonmartin_logo.png" alt="Aston Martin Logo">
+            Fernando Alonso <span class="driver-number">14</span> 
+        </li>
+
+        <li data-driver="Lance Stroll" data-team="Aston Martin">
+            <span class="driver-color" style="--team-background-color: var(--aston-martin-color);"></span>
+            <span class="order-number"></span> 
+            <img src="Images/astonmartin_logo.png" alt="Aston Martin Logo">
+            Lance Stroll <span class="driver-number">18</span> 
+        </li>
+
+        <li data-driver="Charles Leclerc" data-team="Ferrari">
+            <span class="driver-color" style="--team-background-color: var(--ferrari-color);"></span>
+            <span class="order-number"></span> 
+            <img src="Images/ferrari_logo.png" alt="Ferrari Logo">
+            Charles Leclerc <span class="driver-number">16</span> 
+        </li>
+
+        <li data-driver="Carlos Sainz Jr." data-team="Ferrari">
+            <span class="driver-color" style="--team-background-color: var(--ferrari-color);"></span>
+            <span class="order-number"></span> 
+            <img src="Images/ferrari_logo.png" alt="Ferrari Logo">
+            Carlos Sainz Jr. <span class="driver-number">55</span> 
+        </li>
+
+        <li data-driver="Kevin Magnussen" data-team="Haas">
+            <span class="driver-color" style="--team-background-color: var(--haas-color);"></span>
+            <span class="order-number"></span> 
+            <img src="Images/haas_logo.png" alt="Haas Logo">
+            Kevin Magnussen <span class="driver-number">20</span> 
+        </li>
+
+        <li data-driver="Nico Hülkenberg" data-team="Haas">
+            <span class="driver-color" style="--team-background-color: var(--haas-color);"></span>
+            <span class="order-number"></span> 
+            <img src="Images/haas_logo.png" alt="Haas Logo">
+            Nico Hülkenberg <span class="driver-number">27</span> 
+        </li>
+
+        <li data-driver="Lando Norris" data-team="McLaren">
+            <span class="driver-color" style="--team-background-color: var(--mclaren-color);"></span>
+            <span class="order-number"></span> 
+            <img src="Images/mclaren_logo.png" alt="McLaren Logo">
+            Lando Norris <span class="driver-number">4</span> 
+        </li>
+
+        <li data-driver="Oscar Piastri" data-team="McLaren">
+            <span class="driver-color" style="--team-background-color: var(--mclaren-color);"></span>
+            <span class="order-number"></span> 
+            <img src="Images/mclaren_logo.png" alt="McLaren Logo">
+            Oscar Piastri <span class="driver-number">81</span> 
+        </li>
+
+        <li data-driver="George Russell" data-team="Mercedes-AMG">
+            <span class="driver-color" style="--team-background-color: var(--mercedes-amg-color);"></span>
+            <span class="order-number"></span> 
+            <img src="Images/mercedesamg_logo.png" alt="Mercedes-AMG Logo">
+            George Russell <span class="driver-number">63</span> 
+        </li>
+
+        <li data-driver="Lewis Hamilton" data-team="Mercedes-AMG">
+            <span class="driver-color" style="--team-background-color: var(--mercedes-amg-color);"></span>
+            <span class="order-number"></span> 
+            <img src="Images/mercedesamg_logo.png" alt="Mercedes-AMG Logo">
+            Lewis Hamilton <span class="driver-number">44</span> 
+        </li>
+
+        <li data-driver="Sergio Pérez" data-team="Red Bull">
+            <span class="driver-color" style="--team-background-color: var(--red-bull-color);"></span>
+            <span class="order-number"></span> 
+            <img src="Images/redbull_logo.png" alt="Red Bull Logo">
+            Sergio Pérez <span class="driver-number">11</span> 
+        </li>
+
+        <li data-driver="Max Verstappen" data-team="Red Bull">
+            <span class="driver-color" style="--team-background-color: var(--red-bull-color);"></span>
+            <span class="order-number"></span> 
+            <img src="Images/redbull_logo.png" alt="Red Bull Logo">
+            Max Verstappen <span class="driver-number">33</span> 
+        </li> 
+
+        <li data-driver="Alex Albon" data-team="Williams">
+            <span class="driver-color" style="--team-background-color: var(--williams-color);"></span>
+            <span class="order-number"></span> 
+            <img src="Images/williams_logo.png" alt="Williams Logo">
+            Alex Albon <span class="driver-number">23</span> 
+        </li>
+
+        <li data-driver="Logan Sargeant" data-team="Williams">
+            <span class="driver-color" style="--team-background-color: var(--williams-color);"></span>
+            <span class="order-number"></span> 
+            <img src="Images/williams_logo.png" alt="Williams Logo">
+            Logan Sargeant <span class="driver-number">2</span> 
+        </li>
+    </ul>
+
+    <div id="driver-standings"></div>
+
+    <button id="submit-prediction">Submit Prediction</button>
+    <button id="load-prediction">Load Prediction</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
