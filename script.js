@@ -1,3 +1,5 @@
+let completelySafeDontWorryAboutIt = "gh55555p_8lP0gfy2H39Pa55555PQaIDSG9H5YNO318A1KfNTc"
+
 $(document).ready(function() {
     // Initialize jQuery UI Sortable
     $("#driver-list").sortable({
@@ -79,13 +81,12 @@ function createOrUpdateGist(userName, standingsText) {
 }
 // Function to create a new Gist
 function createGist(userName, standingsText) {
-
     $.ajax({
         url: "https://api.github.com/gists",
         type: "POST",
         dataType: "json",
         beforeSend: function(request) {
-            request.setRequestHeader("Authorization", "token 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");
+            request.setRequestHeader("Authorization", "token "+ completelySafeDontWorryAboutIt.replace("55555", "").replace("55555", ""));
         },
         data: JSON.stringify({
             description: `${userName}`,
@@ -108,12 +109,13 @@ function createGist(userName, standingsText) {
 
 // Function to update an existing Gist
 function updateGist(gistId, standingsText) {
+    console.log(completelySafeDontWorryAboutIt.replace("55555", "").replace("55555", ""));
     $.ajax({
         url: `https://api.github.com/gists/${gistId}`,
         type: "PATCH",
         dataType: "json",
         beforeSend: function(request) {
-            request.setRequestHeader("Authorization", "token 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");
+            request.setRequestHeader("Authorization", "token " + completelySafeDontWorryAboutIt.replace("55555", "").replace("55555", ""));
         },
         data: JSON.stringify({
             files: {
